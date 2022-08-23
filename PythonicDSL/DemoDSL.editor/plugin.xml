@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated DemoDSL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="demodsl.presentation.DemodslModelWizardID"
+            name="%_UI_DemodslModelWizard_label"
+            class="demodsl.presentation.DemodslModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/DemodslModelFile.gif">
+         <description>%_UI_DemodslModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated DemoDSL -->
+      <editor
+            id="demodsl.presentation.DemodslEditorID"
+            name="%_UI_DemodslEditor_label"
+            icon="icons/full/obj16/DemodslModelFile.gif"
+            extensions="demodsl"
+            class="demodsl.presentation.DemodslEditor"
+            contributorClass="demodsl.presentation.DemodslActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

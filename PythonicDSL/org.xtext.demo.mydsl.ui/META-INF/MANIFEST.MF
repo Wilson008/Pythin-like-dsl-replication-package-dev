@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.demo.mydsl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.demo.mydsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.demo.mydsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.xtext.demo.mydsl,
+ org.xtext.demo.mydsl.ide,
+ DemoDSL,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.ui,
+ org.eclipse.jdt.debug.ui,
+ org.eclipse.xtext.common.types.ui
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.xtext.demo.mydsl.ui.internal,
+ org.xtext.demo.mydsl.ui.quickfix,
+ org.xtext.demo.mydsl.ui.contentassist,
+ org.xtext.demo.mydsl.ui.editor
+Bundle-Activator: org.xtext.demo.mydsl.ui.internal.MydslActivator

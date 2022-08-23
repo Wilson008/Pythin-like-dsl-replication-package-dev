@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="demodsl" nsURI="https://mdse/demodsl" nsPrefix="demodsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Root">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hardwarecomponent" upperBound="-1"
+        eType="#//HardwareComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwarecomponent" upperBound="-1"
+        eType="#//SoftwareComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HardwareComponent" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UUID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SoftwareComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UUID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocatedTo" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portgroup" upperBound="-1"
+        eType="#//PortGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connector" upperBound="-1"
+        eType="#//Connector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//HardwareComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwarecomponent" upperBound="-1"
+        eType="#//SoftwareComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//HardwareComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actuator" eSuperTypes="#//HardwareComponent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PowerPort" eSuperTypes="#//Port">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputVoltage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionPort" eSuperTypes="#//Port">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//PortDirection"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PortDirection">
+    <eLiterals name="in"/>
+    <eLiterals name="out" value="1"/>
+    <eLiterals name="inout" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortGroup">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="2" upperBound="-1"
+        eType="#//Port" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortConnector" eSuperTypes="#//Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="2" upperBound="2"
+        eType="#//Port" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupConnector" eSuperTypes="#//Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portgroup" lowerBound="2"
+        upperBound="2" eType="#//PortGroup" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

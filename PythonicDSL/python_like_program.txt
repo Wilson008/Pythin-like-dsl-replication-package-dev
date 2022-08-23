@@ -1,0 +1,81 @@
+Root
+{
+	hardwarecomponent {
+		Actuator {
+			identifier actuator1
+		},
+		Node {
+			identifier node1
+			softwarecomponent {
+				SoftwareComponent {
+					identifier swcomp2
+				}
+			}
+		},
+		Sensor {
+			identifier sensor1
+		}
+	}
+	softwarecomponent {
+		SoftwareComponent 
+		{
+			identifier swcomp1
+			port {
+				FunctionPort funcPort1 {
+					direction in
+				}
+			}
+			portgroup {
+				PortGroup portGroup1 {
+					port {
+						PowerPort powerPort1 {
+							inputVoltage 11
+						},
+						PowerPort powerPort2 {
+							inputVoltage 12
+						},
+						FunctionPort funcPort2 {
+							direction inout
+						}
+					}
+				}
+			}
+			connector {
+				PortConnector {
+					port {
+						PowerPort powerPort2 {
+							inputVoltage 13
+						},
+						FunctionPort funcPort2 {
+							direction out
+						}
+					}
+				},
+				GroupConnector {
+					portgroup {
+						PortGroup portGroup2 {
+							port {
+								FunctionPort funcPort3 {
+									direction inout
+								},
+								PowerPort powerPort3 {
+									inputVoltage 14
+								}
+							}
+						},
+						PortGroup portGroup3 {
+							port {
+								FunctionPort funcPort4 {
+									direction out
+								},
+								PowerPort powerPort4 {
+									inputVoltage 21
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.demo.mydsl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.demo.mydsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.demo.mydsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.xtext.demo.mydsl,
+ DemoDSL,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.xtext.demo.mydsl.ide.contentassist.antlr,
+ org.xtext.demo.mydsl.ide.contentassist.antlr.internal,
+ org.xtext.demo.mydsl.ide.contentassist.antlr.lexer

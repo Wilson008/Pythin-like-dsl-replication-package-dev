@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DemoDSL/src" modelPluginID="DemoDSL" modelName="DemoDSL"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>DemoDSL.ecore</foreignModel>
+  <genPackages prefix="Demodsl" disposableProviderFactory="true" ecorePackage="DemoDSL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="DemoDSL.ecore#//PortDirection">
+      <genEnumLiterals ecoreEnumLiteral="DemoDSL.ecore#//PortDirection/in"/>
+      <genEnumLiterals ecoreEnumLiteral="DemoDSL.ecore#//PortDirection/out"/>
+      <genEnumLiterals ecoreEnumLiteral="DemoDSL.ecore#//PortDirection/inout"/>
+    </genEnums>
+    <genClasses ecoreClass="DemoDSL.ecore#//Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//Root/hardwarecomponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//Root/softwarecomponent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DemoDSL.ecore#//HardwareComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//HardwareComponent/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//HardwareComponent/UUID"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//SoftwareComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//SoftwareComponent/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//SoftwareComponent/UUID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//SoftwareComponent/port"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//SoftwareComponent/allocatedTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//SoftwareComponent/portgroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//SoftwareComponent/connector"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//Node/softwarecomponent"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//Sensor"/>
+    <genClasses ecoreClass="DemoDSL.ecore#//Actuator"/>
+    <genClasses image="false" ecoreClass="DemoDSL.ecore#//Port">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//Port/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//PowerPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//PowerPort/inputVoltage"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//FunctionPort">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//FunctionPort/direction"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//PortGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoDSL.ecore#//PortGroup/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//PortGroup/port"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="DemoDSL.ecore#//Connector"/>
+    <genClasses ecoreClass="DemoDSL.ecore#//PortConnector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//PortConnector/port"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoDSL.ecore#//GroupConnector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoDSL.ecore#//GroupConnector/portgroup"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
