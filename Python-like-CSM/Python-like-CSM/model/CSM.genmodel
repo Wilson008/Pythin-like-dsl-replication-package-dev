@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Python-like-CSM/src" modelPluginID="Python-like-CSM"
+    modelName="CSM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>CSM.ecore</foreignModel>
+  <genPackages prefix="Csm" disposableProviderFactory="true" ecorePackage="CSM.ecore#/0">
+    <genClasses ecoreClass="CSM.ecore#/0/CSM">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/CSM/step"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/CSM/generalResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/CSM/scenarion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/CSM/message"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/GeneralResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CSM.ecore#/0/GeneralResource/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/GeneralResource/resourceAcquire"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/GeneralResource/resourceRelease"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/Step">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CSM.ecore#/0/Step/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Step/postPath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Step/prePath"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Step/activeResource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Step/workload"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/Scenarion">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Scenarion/step"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Scenarion/root"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CSM.ecore#/0/Scenarion/pathconnection"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/Start"/>
+    <genClasses ecoreClass="CSM.ecore#/0/Stop"/>
+    <genClasses ecoreClass="CSM.ecore#/0/ResourceAcquire">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/ResourceAcquire/generalResource"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/ResourceRelease">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/ResourceRelease/generalResource"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/Workload">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CSM.ecore#/0/Workload/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/Component"/>
+    <genClasses ecoreClass="CSM.ecore#/0/ProcessingResource"/>
+    <genClasses ecoreClass="CSM.ecore#/0/ExternalService"/>
+    <genClasses ecoreClass="CSM.ecore#/0/ActiveResource">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/ActiveResource/step"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/PassiveResource"/>
+    <genClasses ecoreClass="CSM.ecore#/0/Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CSM.ecore#/0/Message/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/PathConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/PathConnection/message"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/PathConnection/post"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CSM.ecore#/0/PathConnection/pre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CSM.ecore#/0/PathConnection/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CSM.ecore#/0/Join"/>
+    <genClasses ecoreClass="CSM.ecore#/0/Fork"/>
+    <genClasses ecoreClass="CSM.ecore#/0/Merge"/>
+    <genClasses ecoreClass="CSM.ecore#/0/Branch"/>
+    <genClasses ecoreClass="CSM.ecore#/0/Seqence"/>
+  </genPackages>
+  <genPackages prefix="Primitivetype" disposableProviderFactory="true" ecorePackage="CSM.ecore#/1">
+    <genDataTypes ecoreDataType="CSM.ecore#/1/String"/>
+    <genDataTypes ecoreDataType="CSM.ecore#/1/Boolean"/>
+    <genDataTypes ecoreDataType="CSM.ecore#/1/Integer"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Python-like-Jess/src" modelPluginID="Python-like-Jess"
+    modelName="Jess" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Jess.ecore</foreignModel>
+  <genPackages prefix="Jess" disposableProviderFactory="true" ecorePackage="Jess.ecore#/0">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Jess.ecore#/0/Advice">
+      <genEnumLiterals ecoreEnumLiteral="Jess.ecore#/0/Advice/before"/>
+      <genEnumLiterals ecoreEnumLiteral="Jess.ecore#/0/Advice/after"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="Jess.ecore#/0/LocatedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/LocatedElement/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/LocatedElement/commentsBefore"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/LocatedElement/commentsAfter"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/Root/expressions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Jess.ecore#/0/Expression"/>
+    <genClasses ecoreClass="Jess.ecore#/0/Integ">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/Integ/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/Floa">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/Floa/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/Str">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/Str/val"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Jess.ecore#/0/Ident"/>
+    <genClasses ecoreClass="Jess.ecore#/0/ValidIdentifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/ValidIdentifier/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/SlotName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/SlotName/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/JessVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/JessVariable/val"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/TemplateExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateExpression/templateName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateExpression/firstSlot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateExpression/slotOp"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/SlotOp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOp/slotIdent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOp/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOp/exp"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Jess.ecore#/0/DefinitionExp"/>
+    <genClasses ecoreClass="Jess.ecore#/0/GlobalDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/GlobalDefinition/varDef"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/VarDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/VarDefinition/jessVar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/VarDefinition/eq"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/VarDefinition/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/FunctionDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FunctionDefinition/funcName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FunctionDefinition/parameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FunctionDefinition/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/AdviceDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/AdviceDefinition/direction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/AdviceDefinition/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/AdviceDefinition/advice"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/UnDefAdvice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/UnDefAdvice/op"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/FactDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FactDefinition/factName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FactDefinition/documentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FactDefinition/fact"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/RuleDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/RuleDefinition/ruleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/RuleDefinition/documentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/RuleDefinition/declare"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/RuleDefinition/conditions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/RuleDefinition/functionCall"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/DeclareRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareRule/salience"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareRule/nodeIndexHash"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareRule/autoFocus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareRule/noLoop"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/ModuleDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ModuleDefinition/moduleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ModuleDefinition/documentation"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/QueryDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/QueryDefinition/queryName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/QueryDefinition/documentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/QueryDefinition/declare"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/QueryDefinition/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/DeclareVar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareVar/var"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareVar/node"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareVar/max"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/TemplateDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateDefinition/templateName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateDefinition/inherits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateDefinition/documentation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateDefinition/declareBloc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/TemplateDefinition/slotDef"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/DeclareBloc">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareBloc/slotSpecific"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareBloc/backchainReaction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareBloc/fromClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareBloc/includeVariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/DeclareBloc/order"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/ASlotDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ASlotDef/slotName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ASlotDef/optionals"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/SlotDef"/>
+    <genClasses ecoreClass="Jess.ecore#/0/MultiSlotDef"/>
+    <genClasses ecoreClass="Jess.ecore#/0/SlotOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOptions/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOptions/def"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOptions/defaultDyn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/SlotOptions/allowedValues"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Jess.ecore#/0/UseFuncExp"/>
+    <genClasses ecoreClass="Jess.ecore#/0/WhileExp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Jess.ecore#/0/WhileExp/hasDo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/WhileExp/boolExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/WhileExp/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/ForExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForExp/initializer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForExp/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForExp/increment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForExp/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/ForeachExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForeachExp/var"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForeachExp/list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ForeachExp/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/FuncCall">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FuncCall/funcName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/FuncCall/funcParam"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/EngineExp"/>
+    <genClasses ecoreClass="Jess.ecore#/0/ExitExp"/>
+    <genClasses ecoreClass="Jess.ecore#/0/IfExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/IfExpression/ifthen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/IfExpression/elifthen"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/IfExpression/else"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/ConditionAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ConditionAction/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ConditionAction/actions"/>
+    </genClasses>
+    <genClasses ecoreClass="Jess.ecore#/0/ElifConditionAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Jess.ecore#/0/ElifConditionAction/condAct"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Primitivetypes" disposableProviderFactory="true" ecorePackage="Jess.ecore#/1">
+    <genDataTypes ecoreDataType="Jess.ecore#/1/Boolean"/>
+    <genDataTypes ecoreDataType="Jess.ecore#/1/Integer"/>
+    <genDataTypes ecoreDataType="Jess.ecore#/1/String"/>
+    <genDataTypes ecoreDataType="Jess.ecore#/1/Double"/>
+  </genPackages>
+</genmodel:GenModel>

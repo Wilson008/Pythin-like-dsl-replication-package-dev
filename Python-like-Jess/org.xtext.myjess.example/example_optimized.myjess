@@ -1,0 +1,47 @@
+Root
+	location "loca1"
+	commentsBefore 
+		"comments before the expression"
+	commentsAfter
+		"comments after the expression"
+	expressions
+		Integ
+			location "loca2"
+			commentsBefore
+				"comments before the val"
+			commentsAfter
+				"comments after the val" 
+			val 2
+		GlobalDefinition
+			location "loca3"
+			commentsBefore
+				"comments before the val"
+			commentsAfter 
+				"comments after the val"
+			VarDefinition
+				location "loca3"
+				commentsBefore 
+					"comments before the val"
+				commentsAfter 
+					"comments after the val"
+				JessVariable
+					location "loca4"
+					commentsBefore
+						"fsdsd"
+					commentsAfter 
+						"fsedf"
+					val "valtemp"
+				eq
+					location "loca4"
+					commentsBefore
+						 "fsdsd"
+					commentsAfter
+						 "fsedf"
+					val "fsdfs"
+				Integ
+					location "loca2"
+					commentsBefore
+						"comments before the val"						 
+					commentsAfter
+						"comments after the val"
+				 	val 2

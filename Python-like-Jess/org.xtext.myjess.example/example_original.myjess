@@ -1,0 +1,59 @@
+Root
+{
+	location "loca1"
+	commentsBefore 
+	{
+		"comments before the expression"
+	}
+	commentsAfter
+	{
+		"comments after the expression"
+	}
+	expressions
+	{
+		Integ
+		{
+			location "loca2"
+			commentsBefore { "comments before the val" }
+			commentsAfter { "comments after the val" }
+			val 2
+		},
+		GlobalDefinition
+		{
+			location "loca3"
+			commentsBefore { "comments before the val" }
+			commentsAfter { "comments after the val" }
+			varDef 
+			{
+				VarDefinition
+				{
+					location "loca3"
+					commentsBefore { "comments before the val" }
+					commentsAfter { "comments after the val" }
+					jessVar JessVariable
+					{
+						location "loca4"
+						commentsBefore { "fsdsd" }
+						commentsAfter { "fsedf" }
+						val "valtemp"
+					}
+					eq ValidIdentifier
+					{
+						location "loca4"
+						commentsBefore { "fsdsd" }
+						commentsAfter { "fsedf" }
+						val "valtemp"
+					}
+					expression Integ
+					{
+						location "loca2"
+						commentsBefore { "comments before the val" }
+						commentsAfter { "comments after the val" }
+						 val 2
+					}
+				}
+			}
+		}
+	}
+	
+}

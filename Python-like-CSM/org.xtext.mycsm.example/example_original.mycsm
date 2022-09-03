@@ -1,0 +1,70 @@
+CSM
+{
+	step
+	{
+		Start start
+		{
+			postPath join1
+		},
+		ResourceRelease resRel
+		{
+			postPath join1
+		},
+		End end1
+		{
+			workload {
+				Workload {
+					value 2
+				}
+			}
+		}
+	}
+	generalResource
+	{
+		Component comp1
+		{
+			resourceAcquire ( resAcquire )
+			resourceRelease ( resRel )
+		}
+	}
+	scenarion
+	{
+		Scenarion
+		{
+			root (start)
+			step
+			{
+				ResourceAcquire resAcquire
+				{
+					generalResource comp1
+					workload {
+						Workload {
+							value 1
+						}
+					}
+				},
+				End end2
+				{
+					prePath fork
+				}
+			}
+			pathconnection
+			{
+				Join join1
+				{
+					message msg1
+					pre ( resRel )					 
+				},
+				Fork fork
+				{
+					message msg2
+					post ( resAcquire )
+				}
+			}
+		}
+	}
+	message {
+		Message msg1,
+		Message msg2
+	}
+}
