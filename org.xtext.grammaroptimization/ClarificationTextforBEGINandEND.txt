@@ -1,0 +1,12 @@
+// 3. include whitespace-aware blocks in your language is to use synthetic tokens in the grammar 
+//    by writing terminals of the form 'synthetic:<terminal name>'
+terminal BEGIN: 'synthetic:BEGIN';
+terminal END: 'synthetic:END';
+
+// 4. inherits expressions from Xbase and redefines the syntax of block expressions
+@Override
+XBlockExpression returns xbase::XExpression:
+    {xbase::XBlockExpression}
+    BEGIN
+        (expressions+=XExpressionOrVarDeclaration ';'?)*
+    END;
